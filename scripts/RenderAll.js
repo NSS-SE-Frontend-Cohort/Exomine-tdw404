@@ -13,3 +13,18 @@ export const renderHeader = (header) => {
     header.innerHTML = `<div class="logo">EXOMINE<sup>TM</sup> Mineral Trading Platform</div>
     <div class="terminal">${phrases.get(randomInt(1,6))}</div>`
 }
+
+export const renderBody = async (trades) => {
+    trades.innerHTML = 
+    `<article class="trade_screens">
+            <section class="options screen_home">
+                <h2 class="title">Home Colony</h2>
+            </section>
+            <section class="options screen_offers">
+                <h2 class="title">Trade Offers</h2>
+            </section>
+            <section class="options screen_list">
+                <h2 class="title">Planned Trades</h2>
+            </section>
+    </article>`
+}

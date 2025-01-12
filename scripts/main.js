@@ -1,8 +1,8 @@
-import { renderHeader } from "./RenderAll.js"
+import { renderBody, renderHeader } from "./RenderAll.js"
 
 const render = () => {
+    renderHeader(document.querySelector("#header"))
+    renderBody(document.querySelector("#trades"))
 }
 
-
-renderHeader(document.querySelector("#header"))
 render()

@@ -27,3 +27,28 @@ header {
     color: rgb(0,255,51);
     font-size: 20px;
 }
+
+.title {
+    font-family:'VCR';
+    font-size: 20px;
+}
+
+.standard {
+    font-family:'VCR';
+    font-size: 15px;
+}
+
+.trade_screens {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+
+.options {
+    flex-basis: 24%;
+    margin: 0 2rem;
+    border: 1px ridge rgb(5, 5, 5);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
+}
