@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Telefax';
+    src: url('../fonts/Telefax TM.ttf');
+}
+
+@font-face {
+    font-family: 'VCR';
+    src: url('../fonts/VCR_OSD_MONO_1.001.ttf');
+}
+
+body
+header {
+    background-color: rgb(40,40,40);
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+}
+
+.logo {
+    font-family:'Telefax';
+    font-size: 40px;
+    color: rgb(0,255,51);
+}
+
+.terminal {
+    font-family:'VCR';
+    color: rgb(0,255,51)
+}
