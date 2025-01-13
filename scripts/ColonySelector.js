@@ -25,11 +25,14 @@ export const colonyList = async () => {
 }
 
 const ownedMinerals = async () => {
-    const mineralDetails = await getAllMinerals()
+    if(getSelectedColony() != 0) {
+        const mineralDetails = await getAllMinerals()
     const selectedColony = await getColony(getSelectedColony())
     return selectedColony.mineralMap.map(element => {
         return `<li>${mineralDetails.get(element.mineralId).displayName}: ${element.mineralQuantity} ${mineralDetails.get(element.mineralId).unit}</li>`
     }).join(`\n`)
+    } else return (``)
+    
 }
 
 const alphaSort = (a, b) => {
