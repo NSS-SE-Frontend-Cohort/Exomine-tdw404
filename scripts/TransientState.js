@@ -1,9 +1,7 @@
-var selectedGovernor = null
-
-
-
 const state = {
-    "selectedColony": 0
+    "selectedColony": 0,
+    "selectedTrader": 0,
+    "tradeList" : new Map()
 }
 
 export const setColony = (colonyId) => {
@@ -13,6 +11,15 @@ export const setColony = (colonyId) => {
 
 export const getSelectedColony = () => {
     return state.selectedColony
+}
+
+export const setTrader = (traderId) => {
+    state.selectedTrader = traderId
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+}
+
+export const getSelectedTrader = () => {
+    return state.selectedTrader
 }
 
 export const purchaseMineral = () => {

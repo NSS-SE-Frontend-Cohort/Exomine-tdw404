@@ -4,31 +4,20 @@ import { getSelectedColony, setColony } from "./TransientState.js"
 
 export const colonyList = async () => {
     document.addEventListener("change", handleColonyChoice)
-    const render = []
-    render.push(
-    `<label for="colonyList" class = "standard">Welcome, governor.</label>
-        <select class="standard" id="colonyList" name="colonyList">
-        <option value="0">Please select your home colony...</option>`)
     const result = await getAllColonies()
-    result.sort(alphaSort).forEach(element => {
+    // result.sort(alphaSort).forEach(element => {
+    //     var selected = (parseInt(element.id) == getSelectedColony()) ? `selected="selected"` : ``
+    //     render.push(`<option ${selected} value="${element.id}">${element.locationName} - ${element.displayName}: Gov. ${element.colonist.displayName}</option>`)});
+    return result.sort(alphaSort).map(element => {
         var selected = (parseInt(element.id) == getSelectedColony()) ? `selected="selected"` : ``
-        render.push(`<option ${selected} value="${element.id}">${element.locationName} - ${element.displayName}: Gov. ${element.colonist.displayName}</option>`)});
-    render.push(
-    `</select>
-    <hr class="dotted"></hr>
-    <div id ="ownMinerals">
-        <h3 class="title">Home Colony Supplies</h3>
-        <ul class="standard" id="ownMineralList">
-        </ul>
-    </div>`)
-    return render.join(`\n`)
+        return `<option ${selected} value="${element.id}">${element.locationName} - ${element.displayName}: Gov. ${element.colonist.displayName}</option>`}).join(`\n`)
 }
 
-const ownedMinerals = async () => {
+export const ownedMinerals = async () => {
     if(getSelectedColony() != 0) {
         const mineralDetails = await getAllMinerals()
-    const selectedColony = await getColony(getSelectedColony())
-    return selectedColony.mineralMap.map(element => {
+        const selectedColony = await getColony(getSelectedColony())
+        return selectedColony.mineralMap.map(element => {
         return `<li>${mineralDetails.get(element.mineralId).displayName}: ${element.mineralQuantity} ${mineralDetails.get(element.mineralId).unit}</li>`
     }).join(`\n`)
     } else return (``)
@@ -44,6 +33,5 @@ const alphaSort = (a, b) => {
 const handleColonyChoice = async (event) => {
     if (event.target.name === "colonyList") {
         setColony(parseInt(event.target.value))
-        document.querySelector(`#ownMineralList`).innerHTML = await ownedMinerals()
     }
 }
