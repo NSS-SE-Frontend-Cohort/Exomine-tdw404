@@ -1,8 +1,8 @@
 import { renderBody, renderHeader } from "./RenderAll.js"
 
-const render = () => {
+const render = async () => {
     renderHeader(document.querySelector("#header"))
-    renderBody(document.querySelector("#trades"))
+    await renderBody(document.querySelector("#trades"))
 }
 
 render()

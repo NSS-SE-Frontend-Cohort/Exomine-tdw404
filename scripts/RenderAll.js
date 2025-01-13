@@ -1,3 +1,4 @@
+import { colonyList } from "./ColonySelector.js";
 import { randomInt } from "./Randomizer.js";
 
 const phrases = new Map([
@@ -19,6 +20,7 @@ export const renderBody = async (trades) => {
     `<article class="trade_screens">
             <section class="options screen_home">
                 <h2 class="title">Home Colony</h2>
+                ${await colonyList()}
             </section>
             <section class="options screen_offers">
                 <h2 class="title">Trade Offers</h2>

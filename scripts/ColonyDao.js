@@ -1,9 +1,10 @@
 export const getAllColonies = async () => {
-    const response = await fetch ("http://localhost:0888/colonies?expand=colonist")
+    const colonies = await fetch ("http://localhost:8088/colonies?_expand=colonist").then(result => result.json())
+    return colonies
 }
 
 export const getColony = async (colonyId) => {
-    const response = await fetch (`http://localhost:0888/colonies/${colonyId}`)
+    return await fetch (`http://localhost:8088/colonies/${colonyId}`).then(result => result.json())
 }
 
 export const postColony = async (colony) => {
@@ -14,5 +15,5 @@ export const postColony = async (colony) => {
         },
         body: JSON.stringify(colony)
     }
-    const response = await fetch (`http://localhost:0888/colonies/${colonyId}`, postOptions)
+    return await fetch (`http://localhost:8088/colonies/${colonyId}`, postOptions).then(result => result.json())
 }

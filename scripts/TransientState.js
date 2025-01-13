@@ -1,10 +1,18 @@
-const state = {
+var selectedGovernor = null
 
+
+
+const state = {
+    "selectedColony": 0
 }
 
-export const setFacility = (facilityId) => {
-    state.selectedFacility = facilityId
+export const setColony = (colonyId) => {
+    state.selectedColony = colonyId
     document.dispatchEvent(new CustomEvent("stateChanged"))
+}
+
+export const getSelectedColony = () => {
+    return state.selectedColony
 }
 
 export const purchaseMineral = () => {
