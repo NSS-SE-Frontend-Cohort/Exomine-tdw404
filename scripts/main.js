@@ -1,3 +1,4 @@
+import { mineralList } from "./MineralSelector.js"
 import { renderBody, renderHeader } from "./RenderAll.js"
 
 const render = async () => {
@@ -6,3 +7,4 @@ const render = async () => {
 }
 
 render()
+await mineralList()
