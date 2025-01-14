@@ -1,6 +1,6 @@
 import { colonyList, ownedMinerals } from "./ColonySelector.js";
 import { randomInt } from "./Randomizer.js";
-import { offeredMinerals, tradePartnerList } from "./TradeSelector.js";
+import { addToCartButton, offeredMinerals, tradePartnerList } from "./TradeSelector.js";
 
 const phrases = new Map([
     [1, "In space, no one can hear you save!"],
@@ -46,8 +46,8 @@ export const renderBody = async (trades) => {
                     <div id ="offeredMinerals">
                         ${await offeredMinerals()}
                     </div>
-                    <input class="standard" type="number" id="tradeQuantity" name="tradeQuantity" min="0">
-                    <button class='hoverPointer' id='addToCart'>Add to Cart</button>
+                    <input class="standard" type="number" id="tradeQuantity" name="tradeQuantity" min="0" value="0">
+                    ${await addToCartButton()}
             </section>
             <section class="options screen_list">
                 <h2 class="title">Cart</h2>

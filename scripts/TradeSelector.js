@@ -1,7 +1,7 @@
 import { getAllColonies, getColony } from "./ColonyDao.js"
 import { getAllMinerals } from "./MineralDao.js"
 import { formatPrice } from "./PriceFormatter.js"
-import { getSelectedColony, getSelectedMineral, getSelectedTrader, setMineral, setTrader } from "./TransientState.js"
+import { addTrade, getSelectedColony, getSelectedMineral, getSelectedTrader, setMineral, setTrader } from "./TransientState.js"
 
 export const tradePartnerList = async () => {
     document.addEventListener("change", handleTradePartnerChoice)
@@ -37,6 +37,11 @@ export const offeredMinerals = async () => {
     } else return (``) 
 }
 
+export const addToCartButton = async () => {
+    document.addEventListener("click", addToCart)
+    return `<button class='hoverPointer' id='addToCart'>Add to Cart</button>`
+}
+
 const alphaSort = (a, b) => {
     var locA = a.locationName.toUpperCase();
     var locB = b.locationName.toUpperCase();
@@ -52,5 +57,14 @@ const handleTradePartnerChoice = async (event) => {
 const handleMineralChoice = async (event) => {
     if (event.target.name === "tradeOption") {
         setMineral(parseInt(event.target.value))
+    }
+}
+
+const addToCart = async (clickEvent) => {
+    if (clickEvent.target.id === "addToCart" 
+        && document.querySelector('#tradeQuantity').value > 0
+        && getSelectedMineral != 0) {
+        document.activeElement.blur()
+        addTrade(parseInt(document.querySelector('#tradeQuantity').value))
     }
 }

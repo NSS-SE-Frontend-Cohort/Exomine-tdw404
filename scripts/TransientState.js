@@ -36,6 +36,18 @@ export const setMineral = (mineralID) => {
 export const getSelectedMineral = () => {
     return state.selectedMineral
 }
+
+export const addTrade = (quantity) => {
+    state.tradeList.set(Date.now(), {
+        "selectedColony": state.selectedColony,
+        "selectedTrader": state.selectedTrader,
+        "selectedMineral": state.selectedMineral,
+        "quantity": quantity
+    })
+    console.log(state.tradeList)
+    state.selectedMineral = 0
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+}
 export const purchaseMineral = () => {
     /*
         Does the chosen governor's colony already own some of this mineral?
