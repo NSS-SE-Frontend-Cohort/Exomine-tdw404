@@ -1,11 +1,15 @@
 const state = {
     "selectedColony": 0,
     "selectedTrader": 0,
+    "selectedMineral": 0,
     "tradeList" : new Map()
 }
 
+
+
 export const setColony = (colonyId) => {
     state.selectedColony = colonyId
+    console.log(`Selected colony = ${state.selectedColony}`)
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
@@ -15,6 +19,7 @@ export const getSelectedColony = () => {
 
 export const setTrader = (traderId) => {
     state.selectedTrader = traderId
+    console.log(`Selected trader = ${state.selectedTrader}`)
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
@@ -22,6 +27,15 @@ export const getSelectedTrader = () => {
     return state.selectedTrader
 }
 
+export const setMineral = (mineralID) => {
+    state.selectedMineral = mineralID
+    console.log(`Selected mineral = ${state.selectedMineral}`)
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+}
+
+export const getSelectedMineral = () => {
+    return state.selectedMineral
+}
 export const purchaseMineral = () => {
     /*
         Does the chosen governor's colony already own some of this mineral?

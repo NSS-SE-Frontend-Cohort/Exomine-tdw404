@@ -5,9 +5,6 @@ import { getSelectedColony, setColony } from "./TransientState.js"
 export const colonyList = async () => {
     document.addEventListener("change", handleColonyChoice)
     const result = await getAllColonies()
-    // result.sort(alphaSort).forEach(element => {
-    //     var selected = (parseInt(element.id) == getSelectedColony()) ? `selected="selected"` : ``
-    //     render.push(`<option ${selected} value="${element.id}">${element.locationName} - ${element.displayName}: Gov. ${element.colonist.displayName}</option>`)});
     return result.sort(alphaSort).map(element => {
         var selected = (parseInt(element.id) == getSelectedColony()) ? `selected="selected"` : ``
         return `<option ${selected} value="${element.id}">${element.locationName} - ${element.displayName}: Gov. ${element.colonist.displayName}</option>`}).join(`\n`)
@@ -20,8 +17,7 @@ export const ownedMinerals = async () => {
         return selectedColony.mineralMap.map(element => {
         return `<li>${mineralDetails.get(element.mineralId).displayName}: ${element.mineralQuantity} ${mineralDetails.get(element.mineralId).unit}</li>`
     }).join(`\n`)
-    } else return (``)
-    
+    } else return (``) 
 }
 
 const alphaSort = (a, b) => {

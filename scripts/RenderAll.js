@@ -1,5 +1,6 @@
 import { colonyList, ownedMinerals } from "./ColonySelector.js";
 import { randomInt } from "./Randomizer.js";
+import { offeredMinerals, tradePartnerList } from "./TradeSelector.js";
 
 const phrases = new Map([
     [1, "In space, no one can hear you save!"],
@@ -21,7 +22,7 @@ export const renderBody = async (trades) => {
             <section class="options screen_home">
                 <h2 class="title">Home Colony</h2>
                 <label for="colonyList" class = "standard">Welcome, governor.</label>
-                <select class="standard" id="colonyList" name="colonyList">
+                <select class="standard hoverPointer" id="colonyList" name="colonyList">
                 <option value="0">Please select your home colony...</option>
                 ${await colonyList()}
                 </select>
@@ -31,11 +32,22 @@ export const renderBody = async (trades) => {
                     <ul class="standard" id="ownMineralList">
                         ${await ownedMinerals()}
                     </ul>
-            </div>
+                </div>
             </section>
             <section class="options screen_offers">
                 <h2 class="title">Trade Offers</h2>
-                <div class="standard" id="trading_dialogue">Select your home colony before continuing.</div>
+                <label for="traderList" class = "standard hoverPointer">Trading with:</label>
+                <select class="standard" id="traderList" name="traderList">
+                <option value="0">Please select a trading partner...</option>
+                    ${await tradePartnerList()}
+                </select>
+                <hr class="dotted"></hr>
+                    <h3 class="title">Minerals on Offer</h3>
+                    <div id ="offeredMinerals">
+                        ${await offeredMinerals()}
+                    </div>
+                    <input class="standard" type="number" id="tradeQuantity" name="tradeQuantity" min="0">
+                    <button class='hoverPointer' id='addToCart'>Add to Cart</button>
             </section>
             <section class="options screen_list">
                 <h2 class="title">Cart</h2>

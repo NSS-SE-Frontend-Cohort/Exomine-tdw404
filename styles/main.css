@@ -9,6 +9,23 @@
 }
 
 body
+
+button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid black;
+    font-family:'VCR';
+    font-size: 15px;
+}
+
+button:focus {
+    background: #e5e5e5;
+    outline: none;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 5px #c1c1c1;
+  }
+
 header {
     background-color: rgb(40,40,40);
     padding-left: 20px;
@@ -51,4 +68,8 @@ header {
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
+}
+
+.hoverPointer {
+    cursor: pointer;
 }

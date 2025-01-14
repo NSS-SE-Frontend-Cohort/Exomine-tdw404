@@ -1,26 +1,56 @@
-import { getAllColonies } from "./ColonyDao.js"
+import { getAllColonies, getColony } from "./ColonyDao.js"
 import { getAllMinerals } from "./MineralDao.js"
-import { getSelectedColony } from "./TransientState.js"
+import { formatPrice } from "./PriceFormatter.js"
+import { getSelectedColony, getSelectedMineral, getSelectedTrader, setMineral, setTrader } from "./TransientState.js"
 
 export const tradePartnerList = async () => {
+    document.addEventListener("change", handleTradePartnerChoice)
     if(getSelectedColony() != 0) {
         const mineralDetails = await getAllMinerals()
         const colonyList = await getAllColonies()
-        const render = []
-        render.push(
-        `<label for="tradePartnerList" class = "standard">Select a trading partner.</label>
-        <select class="standard" id="tradePartnerList" name="tradePartnerList">
-        <option value="0">Please select a trading partner...</option>`)
         const result = await getAllColonies()
-        result.sort(alphaSort).forEach(element => {
-                var selected = (parseInt(element.id) == getSelectedColony()) ? `selected="selected"` : ``
-                render.push(`<option ${selected} value="${element.id}">${element.locationName} - ${element.displayName}: Gov. ${element.colonist.displayName}</option>`)});
-        document.querySelector(`#trading_dialogue`).innerHTML = (`Working on it`)
-    } else document.querySelector(`#trading_dialogue`).innerHTML = (`Select your home colony before continuing.`)
+        return result.sort(alphaSort).map(element => {
+                var selected = (parseInt(element.id) == getSelectedTrader()) ? `selected="selected"` : ``
+                if(element.id != getSelectedColony()) {
+                    return `<option ${selected} value="${element.id}">${element.locationName} - ${element.displayName}</option>`
+                }}).join(`\n`);
+    } else {
+        //document.querySelector(`#traderList`).disabled = true
+        return ''
+    }
+}
+
+export const offeredMinerals = async () => {
+    document.addEventListener("change", handleMineralChoice)
+    if(getSelectedTrader() != 0) {
+        const mineralDetails = await getAllMinerals()
+        const selectedTrader = await getColony(getSelectedTrader())
+        return selectedTrader.mineralMap.map(element => {
+            var selected = (parseInt(element.mineralId) == getSelectedMineral()) ? `checked` : ``
+            return `
+            <label class='hoverPointer standard'>
+            <input type='radio' class='hoverPointer standard' name='tradeOption' value='${element.mineralId}' ${selected}/> ${mineralDetails.get(element.mineralId).displayName}: ${element.mineralQuantity} ${mineralDetails.get(element.mineralId).unit} @ ${formatPrice(mineralDetails.get(element.mineralId).pricePerUnit)}/unit
+            </label>
+            <br>
+            `
+    }).join(`\n`)
+    } else return (``) 
 }
 
 const alphaSort = (a, b) => {
     var locA = a.locationName.toUpperCase();
     var locB = b.locationName.toUpperCase();
     return (locA < locB) ? -1 : (locA > locB) ? 1 : 0;
+}
+
+const handleTradePartnerChoice = async (event) => {
+    if (event.target.name === "traderList") {
+        setTrader(parseInt(event.target.value))
+    }
+}
+
+const handleMineralChoice = async (event) => {
+    if (event.target.name === "tradeOption") {
+        setMineral(parseInt(event.target.value))
+    }
 }
