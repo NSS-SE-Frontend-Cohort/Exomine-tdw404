@@ -1,6 +1,6 @@
 import { getAllColonies, getColony } from "./ColonyDao.js"
 import { getAllMinerals } from "./MineralDao.js"
-import { getSelectedColony, setColony } from "./TransientState.js"
+import { getSelectedColony, refreshChoices, setColony } from "./TransientState.js"
 
 export const colonyList = async () => {
     document.addEventListener("change", handleColonyChoice)
@@ -29,5 +29,6 @@ const alphaSort = (a, b) => {
 const handleColonyChoice = async (event) => {
     if (event.target.name === "colonyList") {
         setColony(parseInt(event.target.value))
+        refreshChoices()
     }
 }

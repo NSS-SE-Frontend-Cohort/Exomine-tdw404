@@ -63,7 +63,7 @@ const handleMineralChoice = async (event) => {
 const addToCart = async (clickEvent) => {
     if (clickEvent.target.id === "addToCart" 
         && document.querySelector('#tradeQuantity').value > 0
-        && getSelectedMineral != 0) {
+        && getSelectedMineral() != 0) {
         document.activeElement.blur()
         addTrade(parseInt(document.querySelector('#tradeQuantity').value))
     }

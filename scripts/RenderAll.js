@@ -51,7 +51,7 @@ export const renderBody = async (trades) => {
             <section class="options screen_list">
                 <h2 class="title">Cart</h2>
                 <hr class="dotted"></hr>
-                <!-- ${await populateCart()} -->
+                ${await populateCart()}
                 <hr class="dotted"></hr>
                 ${await cartTotal()}
             </section>

@@ -61,11 +61,25 @@ export const setTrade = (tradeId) =>{
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
-export const getTrade = () => {
+export const getSelectedTrade = () => {
     return state.selectedTrade
 }
 
-export const purchaseMineral = () => {
+export const removeTrade = () => {
+    state.tradeList.delete(state.selectedTrade)
+    state.selectedTrade = 0
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+}
+
+export const refreshChoices = () => {
+    state.selectedTrader = 0
+    state.selectedMineral = 0
+    state.tradeList = new Map()
+    state.selectedTrade = 0
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+}
+
+export const purchaseMineral = async () => {
     /*
         Does the chosen governor's colony already own some of this mineral?
             - If yes, what should happen?
@@ -77,6 +91,7 @@ export const purchaseMineral = () => {
 
         Only the foolhardy try to solve this problem with code.
     */
+
 
 
 
