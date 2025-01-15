@@ -1,3 +1,4 @@
+import { cartTotal, populateCart } from "./CartSelector.js";
 import { colonyList, ownedMinerals } from "./ColonySelector.js";
 import { randomInt } from "./Randomizer.js";
 import { addToCartButton, offeredMinerals, tradePartnerList } from "./TradeSelector.js";
@@ -39,19 +40,20 @@ export const renderBody = async (trades) => {
                 <label for="traderList" class = "standard hoverPointer">Trading with:</label>
                 <select class="standard" id="traderList" name="traderList">
                 <option value="0">Please select a trading partner...</option>
-                    ${await tradePartnerList()}
+                ${await tradePartnerList()}
                 </select>
                 <hr class="dotted"></hr>
                     <h3 class="title">Minerals on Offer</h3>
-                    <div id ="offeredMinerals">
-                        ${await offeredMinerals()}
-                    </div>
+                    ${await offeredMinerals()}
                     <input class="standard" type="number" id="tradeQuantity" name="tradeQuantity" min="0" value="0">
                     ${await addToCartButton()}
             </section>
             <section class="options screen_list">
                 <h2 class="title">Cart</h2>
-                <div class="standard" id="cart_dialogue">Select your home colony before continuing.</div>
+                <hr class="dotted"></hr>
+                <!-- ${await populateCart()} -->
+                <hr class="dotted"></hr>
+                ${await cartTotal()}
             </section>
     </article>`
 }
