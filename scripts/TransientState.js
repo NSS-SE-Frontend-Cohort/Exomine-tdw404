@@ -1,3 +1,5 @@
+import { getColony, updateColony } from "./ColonyDao.js"
+
 const state = {
     "selectedColony": 0,
     "selectedTrader": 0,
@@ -10,7 +12,6 @@ const state = {
 
 export const setColony = (colonyId) => {
     state.selectedColony = colonyId
-    console.log(`Selected colony = ${state.selectedColony}`)
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
@@ -20,7 +21,6 @@ export const getSelectedColony = () => {
 
 export const setTrader = (traderId) => {
     state.selectedTrader = traderId
-    console.log(`Selected trader = ${state.selectedTrader}`)
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
@@ -30,7 +30,6 @@ export const getSelectedTrader = () => {
 
 export const setMineral = (mineralID) => {
     state.selectedMineral = mineralID
-    console.log(`Selected mineral = ${state.selectedMineral}`)
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
@@ -43,10 +42,8 @@ export const addTrade = (quantity, price) => {
         "selectedColony": state.selectedColony,
         "selectedTrader": state.selectedTrader,
         "selectedMineral": state.selectedMineral,
-        "quantity": quantity,
-        "price": price
+        "quantity": quantity
     })
-    console.log(state.tradeList)
     state.selectedMineral = 0
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
@@ -57,7 +54,6 @@ export const getTradeList = () => {
 
 export const setTrade = (tradeId) =>{
     state.selectedTrade = tradeId
-    console.log(`Selected trade = ${state.selectedTrade}`)
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
@@ -92,8 +88,42 @@ export const purchaseMineral = async () => {
         Only the foolhardy try to solve this problem with code.
     */
 
-
-
-
+    for(const value of state.tradeList.values()) {
+        const homeColony = await getColony(value.selectedColony)
+        const tradeColony = await getColony(value.selectedTrader)
+        const homeMinerals = mapMaker(homeColony.mineralMap)
+        const tradeMinerals = mapMaker(tradeColony.mineralMap)
+        console.log(homeColony.mineralMap)
+        const selectedMineral = value.selectedMineral
+        if (tradeMinerals.has(selectedMineral)) {
+            const requested = value.quantity
+            const available = tradeMinerals.get(selectedMineral).mineralQuantity
+            const actual = Math.min(requested, available)
+            const stockpile = homeMinerals.get(selectedMineral)? homeMinerals.get(selectedMineral).mineralQuantity : 0
+            if (available == actual) {
+                tradeMinerals.delete(selectedMineral)
+            }else
+            {tradeMinerals.get(selectedMineral).mineralQuantity = (available - actual)}
+            if (homeMinerals.has(selectedMineral)) {
+                homeMinerals.get(selectedMineral).mineralQuantity = stockpile + actual
+            } else {
+                homeMinerals.set(selectedMineral, {"mineralId": selectedMineral, "mineralQuantity": actual})
+            }
+            homeColony.mineralMap = Array.from(homeMinerals.values())
+            updateColony(homeColony)
+            tradeColony.mineralMap = Array.from(tradeMinerals.values())
+            updateColony(tradeColony)
+        }
+    }
+    state.selectedTrade = 0
+    state.tradeList = new Map()
     document.dispatchEvent(new CustomEvent("stateChanged"))
+}
+
+const mapMaker = (object) => {
+    const newMap = new Map()
+    object.forEach(element => {
+        newMap.set(element.mineralId, element)
+    });
+    return newMap
 }

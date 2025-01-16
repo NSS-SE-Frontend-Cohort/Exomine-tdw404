@@ -1,7 +1,7 @@
 import { getAllColonies, getColonyMap } from "./ColonyDao.js"
 import { getAllMinerals } from "./MineralDao.js"
 import { formatPrice } from "./PriceFormatter.js"
-import { getSelectedTrade, getTradeList, removeTrade, setTrade } from "./TransientState.js"
+import { getSelectedTrade, getTradeList, purchaseMineral, removeTrade, setTrade } from "./TransientState.js"
 
 export const populateCart = async () => {
     document.addEventListener("change", handleTradeChoice)
@@ -32,6 +32,7 @@ export const cartTotal = async () => {
         const mineral = mineralDetails.get(element.selectedMineral)
         total += (element.quantity * mineral.pricePerUnit)})
     document.addEventListener("click", deleteTrade)
+    document.addEventListener("click", completeTrade)
     return `<div class="standard"> Cart total = ${formatPrice(total)}</div>
         <button class='hoverPointer' id='removeTrade'>Remove Selected</button>
         <button class='hoverPointer' id='completeTrade'>Checkout</button>`
@@ -48,5 +49,13 @@ const deleteTrade = async (clickEvent) => {
         && getSelectedTrade() != 0) {
         document.activeElement.blur()
         removeTrade()
+    }
+}
+
+const completeTrade = async (clickEvent) => {
+    if (clickEvent.target.id === "completeTrade" 
+        && getTradeList().size > 0) {
+        document.activeElement.blur()
+        await purchaseMineral()
     }
 }

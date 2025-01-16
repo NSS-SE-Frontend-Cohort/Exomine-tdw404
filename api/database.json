@@ -1,393 +1,996 @@
 {
-    "minerals":[
-        { 
-            "id": 1,
-            "displayName": "Molybdenum",
-            "unit": "kilograms",
-            "pricePerUnit": 100
+  "minerals": [
+    {
+      "id": 1,
+      "displayName": "Molybdenum",
+      "unit": "kilograms",
+      "pricePerUnit": 100
+    },
+    {
+      "id": 2,
+      "displayName": "Titanium",
+      "unit": "kilograms",
+      "pricePerUnit": 150
+    },
+    {
+      "id": 3,
+      "displayName": "Iron",
+      "unit": "metric tons",
+      "pricePerUnit": 500
+    },
+    {
+      "id": 4,
+      "displayName": "Aluminum",
+      "unit": "metric tons",
+      "pricePerUnit": 1700
+    },
+    {
+      "id": 5,
+      "displayName": "Copper",
+      "unit": "kilograms",
+      "pricePerUnit": 9
+    },
+    {
+      "id": 6,
+      "displayName": "Silicon",
+      "unit": "kilograms",
+      "pricePerUnit": 2
+    },
+    {
+      "id": 7,
+      "displayName": "Cobalt",
+      "unit": "kilograms",
+      "pricePerUnit": 40
+    },
+    {
+      "id": 8,
+      "displayName": "Lithium",
+      "unit": "kilograms",
+      "pricePerUnit": 75
+    },
+    {
+      "id": 9,
+      "displayName": "Nickel",
+      "unit": "kilograms",
+      "pricePerUnit": 20
+    },
+    {
+      "id": 10,
+      "displayName": "Gold",
+      "unit": "grams",
+      "pricePerUnit": 60
+    },
+    {
+      "id": 11,
+      "displayName": "Platinum",
+      "unit": "grams",
+      "pricePerUnit": 100
+    },
+    {
+      "id": 12,
+      "displayName": "Uranium",
+      "unit": "kilograms",
+      "pricePerUnit": 1000
+    },
+    {
+      "id": 13,
+      "displayName": "Rare Earth Elements",
+      "unit": "kilograms",
+      "pricePerUnit": 500
+    },
+    {
+      "id": 14,
+      "displayName": "Zinc",
+      "unit": "kilograms",
+      "pricePerUnit": 4
+    },
+    {
+      "id": 15,
+      "displayName": "Magnesium",
+      "unit": "kilograms",
+      "pricePerUnit": 3
+    },
+    {
+      "id": 16,
+      "displayName": "Graphite",
+      "unit": "kilograms",
+      "pricePerUnit": 5
+    },
+    {
+      "id": 17,
+      "displayName": "Helium-3",
+      "unit": "grams",
+      "pricePerUnit": 10000
+    },
+    {
+      "id": 18,
+      "displayName": "Calcium",
+      "unit": "kilograms",
+      "pricePerUnit": 1.5
+    },
+    {
+      "id": 19,
+      "displayName": "Phosphorus",
+      "unit": "kilograms",
+      "pricePerUnit": 8
+    },
+    {
+      "id": 20,
+      "displayName": "Sulfur",
+      "unit": "kilograms",
+      "pricePerUnit": 0.5
+    }
+  ],
+  "colonists": [
+    {
+      "id": 1,
+      "displayName": "Roger Wilco"
+    },
+    {
+      "id": 2,
+      "displayName": "Nova Starbright"
+    },
+    {
+      "id": 3,
+      "displayName": "Akio Tanaka"
+    },
+    {
+      "id": 4,
+      "displayName": "Adira Patel"
+    },
+    {
+      "id": 5,
+      "displayName": "Jamal Robinson"
+    },
+    {
+      "id": 6,
+      "displayName": "Lars Bjornson"
+    },
+    {
+      "id": 7,
+      "displayName": "Chen Wei"
+    },
+    {
+      "id": 8,
+      "displayName": "Alejandra Martinez"
+    },
+    {
+      "id": 9,
+      "displayName": "Zhang Li"
+    },
+    {
+      "id": 10,
+      "displayName": "Samantha Blake"
+    },
+    {
+      "id": 11,
+      "displayName": "Ravi Kapoor"
+    },
+    {
+      "id": 12,
+      "displayName": "Yasmin El-Amin"
+    },
+    {
+      "id": 13,
+      "displayName": "Hans Meyer"
+    },
+    {
+      "id": 14,
+      "displayName": "Vera Andropov"
+    },
+    {
+      "id": 15,
+      "displayName": "Malik Okoro"
+    },
+    {
+      "id": 16,
+      "displayName": "Kai Nakamura"
+    },
+    {
+      "id": 17,
+      "displayName": "Sofia Hernandez"
+    },
+    {
+      "id": 18,
+      "displayName": "Anders Halvorsen"
+    },
+    {
+      "id": 19,
+      "displayName": "Lila Nguyen"
+    },
+    {
+      "id": 20,
+      "displayName": "Ibrahim Al-Farsi"
+    },
+    {
+      "id": 21,
+      "displayName": "Katherine Ryder"
+    },
+    {
+      "id": 22,
+      "displayName": "Takumi Yamashita"
+    },
+    {
+      "id": 23,
+      "displayName": "Maria da Silva"
+    },
+    {
+      "id": 24,
+      "displayName": "Ezekiel Winters"
+    },
+    {
+      "id": 25,
+      "displayName": "Galacticus Jones"
+    },
+    {
+      "id": 26,
+      "displayName": "Anika Gupta"
+    },
+    {
+      "id": 27,
+      "displayName": "Santiago Lopez"
+    },
+    {
+      "id": 28,
+      "displayName": "Leila Hassan"
+    },
+    {
+      "id": 29,
+      "displayName": "Igor Popov"
+    },
+    {
+      "id": 30,
+      "displayName": "Ming Yue"
+    },
+    {
+      "id": 31,
+      "displayName": "Diego Costa"
+    },
+    {
+      "id": 32,
+      "displayName": "Amara Osei"
+    },
+    {
+      "id": 33,
+      "displayName": "Eleanor Finch"
+    },
+    {
+      "id": 34,
+      "displayName": "Hiroshi Fujimoto"
+    },
+    {
+      "id": 35,
+      "displayName": "Camila Torres"
+    },
+    {
+      "id": 36,
+      "displayName": "Carter Steele"
+    },
+    {
+      "id": 37,
+      "displayName": "Anastasia Romanov"
+    },
+    {
+      "id": 38,
+      "displayName": "Zane Armstrong"
+    },
+    {
+      "id": 39,
+      "displayName": "Tariq Khan"
+    },
+    {
+      "id": 40,
+      "displayName": "Ella Sinclair"
+    },
+    {
+      "id": 41,
+      "displayName": "Omar Baraka"
+    },
+    {
+      "id": 42,
+      "displayName": "Luciana Ricci"
+    },
+    {
+      "id": 43,
+      "displayName": "Mikhail Ivanov"
+    },
+    {
+      "id": 44,
+      "displayName": "Astrid Lindholm"
+    },
+    {
+      "id": 45,
+      "displayName": "Asha Reddy"
+    },
+    {
+      "id": 46,
+      "displayName": "Finn Gallagher"
+    },
+    {
+      "id": 47,
+      "displayName": "Juno Stellar"
+    },
+    {
+      "id": 48,
+      "displayName": "Rita Farouk"
+    },
+    {
+      "id": 49,
+      "displayName": "Damian Black"
+    },
+    {
+      "id": 50,
+      "displayName": "Cosmo Vega"
+    }
+  ],
+  "colonies": [
+    {
+      "id": 1,
+      "displayName": "Olympus Mons",
+      "locationName": "Mars",
+      "colonistId": 28,
+      "mineralMap": [
+        {
+          "mineralId": 11,
+          "mineralQuantity": 662
         },
-        { 
-            "id": 2,
-            "displayName": "Titanium",
-            "unit": "kilograms",
-            "pricePerUnit": 150
+        {
+          "mineralId": 2,
+          "mineralQuantity": 613
         },
-        { 
-            "id": 3,
-            "displayName": "Iron",
-            "unit": "metric tons",
-            "pricePerUnit": 500
+        {
+          "mineralId": 18,
+          "mineralQuantity": 1141
         },
-        { 
-            "id": 4,
-            "displayName": "Aluminum",
-            "unit": "metric tons",
-            "pricePerUnit": 1700
-        },
-        { 
-            "id": 5,
-            "displayName": "Copper",
-            "unit": "kilograms",
-            "pricePerUnit": 9
-        },
-        { 
-            "id": 6,
-            "displayName": "Silicon",
-            "unit": "kilograms",
-            "pricePerUnit": 2
-        },
-        { 
-            "id": 7,
-            "displayName": "Cobalt",
-            "unit": "kilograms",
-            "pricePerUnit": 40
-        },
-        { 
-            "id": 8,
-            "displayName": "Lithium",
-            "unit": "kilograms",
-            "pricePerUnit": 75
-        },
-        { 
-            "id": 9,
-            "displayName": "Nickel",
-            "unit": "kilograms",
-            "pricePerUnit": 20
-        },
-        { 
-            "id": 10,
-            "displayName": "Gold",
-            "unit": "grams",
-            "pricePerUnit": 60
-        },
-        { 
-            "id": 11,
-            "displayName": "Platinum",
-            "unit": "grams",
-            "pricePerUnit": 100
-        },
-        { 
-            "id": 12,
-            "displayName": "Uranium",
-            "unit": "kilograms",
-            "pricePerUnit": 1000
-        },
-        { 
-            "id": 13,
-            "displayName": "Rare Earth Elements",
-            "unit": "kilograms",
-            "pricePerUnit": 500
-        },
-        { 
-            "id": 14,
-            "displayName": "Zinc",
-            "unit": "kilograms",
-            "pricePerUnit": 4
-        },
-        { 
-            "id": 15,
-            "displayName": "Magnesium",
-            "unit": "kilograms",
-            "pricePerUnit": 3
-        },
-        { 
-            "id": 16,
-            "displayName": "Graphite",
-            "unit": "kilograms",
-            "pricePerUnit": 5
-        },
-        { 
-            "id": 17,
-            "displayName": "Helium-3",
-            "unit": "grams",
-            "pricePerUnit": 10000
-        },
-        { 
-            "id": 18,
-            "displayName": "Calcium",
-            "unit": "kilograms",
-            "pricePerUnit": 1.5
-        },
-        { 
-            "id": 19,
-            "displayName": "Phosphorus",
-            "unit": "kilograms",
-            "pricePerUnit": 8
-        },
-        { 
-            "id": 20,
-            "displayName": "Sulfur",
-            "unit": "kilograms",
-            "pricePerUnit": 0.5
+        {
+          "mineralId": 6,
+          "mineralQuantity": 2785
         }
-    ],
-    "colonists": [
-        { "id": 1, "displayName": "Roger Wilco" },
-        { "id": 2, "displayName": "Nova Starbright" },
-        { "id": 3, "displayName": "Akio Tanaka" },
-        { "id": 4, "displayName": "Adira Patel" },
-        { "id": 5, "displayName": "Jamal Robinson" },
-        { "id": 6, "displayName": "Lars Bjornson" },
-        { "id": 7, "displayName": "Chen Wei" },
-        { "id": 8, "displayName": "Alejandra Martinez" },
-        { "id": 9, "displayName": "Zhang Li" },
-        { "id": 10, "displayName": "Samantha Blake" },
-        { "id": 11, "displayName": "Ravi Kapoor" },
-        { "id": 12, "displayName": "Yasmin El-Amin" },
-        { "id": 13, "displayName": "Hans Meyer" },
-        { "id": 14, "displayName": "Vera Andropov" },
-        { "id": 15, "displayName": "Malik Okoro" },
-        { "id": 16, "displayName": "Kai Nakamura" },
-        { "id": 17, "displayName": "Sofia Hernandez" },
-        { "id": 18, "displayName": "Anders Halvorsen" },
-        { "id": 19, "displayName": "Lila Nguyen" },
-        { "id": 20, "displayName": "Ibrahim Al-Farsi" },
-        { "id": 21, "displayName": "Katherine Ryder" },
-        { "id": 22, "displayName": "Takumi Yamashita" },
-        { "id": 23, "displayName": "Maria da Silva" },
-        { "id": 24, "displayName": "Ezekiel Winters" },
-        { "id": 25, "displayName": "Galacticus Jones" },
-        { "id": 26, "displayName": "Anika Gupta" },
-        { "id": 27, "displayName": "Santiago Lopez" },
-        { "id": 28, "displayName": "Leila Hassan" },
-        { "id": 29, "displayName": "Igor Popov" },
-        { "id": 30, "displayName": "Ming Yue" },
-        { "id": 31, "displayName": "Diego Costa" },
-        { "id": 32, "displayName": "Amara Osei" },
-        { "id": 33, "displayName": "Eleanor Finch" },
-        { "id": 34, "displayName": "Hiroshi Fujimoto" },
-        { "id": 35, "displayName": "Camila Torres" },
-        { "id": 36, "displayName": "Carter Steele" },
-        { "id": 37, "displayName": "Anastasia Romanov" },
-        { "id": 38, "displayName": "Zane Armstrong" },
-        { "id": 39, "displayName": "Tariq Khan" },
-        { "id": 40, "displayName": "Ella Sinclair" },
-        { "id": 41, "displayName": "Omar Baraka" },
-        { "id": 42, "displayName": "Luciana Ricci" },
-        { "id": 43, "displayName": "Mikhail Ivanov" },
-        { "id": 44, "displayName": "Astrid Lindholm" },
-        { "id": 45, "displayName": "Asha Reddy" },
-        { "id": 46, "displayName": "Finn Gallagher" },
-        { "id": 47, "displayName": "Juno Stellar" },
-        { "id": 48, "displayName": "Rita Farouk" },
-        { "id": 49, "displayName": "Damian Black" },
-        { "id": 50, "displayName": "Cosmo Vega" }
-    ],
-    "colonies": [{"id": 1,
-    "displayName": "Olympus Mons",
-    "locationName": "Mars",
-    "colonistId": 28,
-    "mineralMap": [{"mineralId": 11, "mineralQuantity": 662},
-     {"mineralId": 2, "mineralQuantity": 613},
-     {"mineralId": 18, "mineralQuantity": 1141},
-     {"mineralId": 6, "mineralQuantity": 2785}]},
-   {"id": 2,
-    "displayName": "Valles Marineris",
-    "locationName": "Mars",
-    "colonistId": 38,
-    "mineralMap": [{"mineralId": 20, "mineralQuantity": 2805},
-     {"mineralId": 9, "mineralQuantity": 3000},
-     {"mineralId": 4, "mineralQuantity": 778}]},
-   {"id": 3,
-    "displayName": "Arsia Colony",
-    "locationName": "Mars",
-    "colonistId": 32,
-    "mineralMap": [{"mineralId": 8, "mineralQuantity": 1285},
-     {"mineralId": 16, "mineralQuantity": 1723},
-     {"mineralId": 15, "mineralQuantity": 1181},
-     {"mineralId": 7, "mineralQuantity": 243},
-     {"mineralId": 4, "mineralQuantity": 2559},
-     {"mineralId": 18, "mineralQuantity": 1224},
-     {"mineralId": 11, "mineralQuantity": 1061}]},
-   {"id": 4,
-    "displayName": "Conamara Chaos",
-    "locationName": "Europa",
-    "colonistId": 11,
-    "mineralMap": [{"mineralId": 4, "mineralQuantity": 1679},
-     {"mineralId": 5, "mineralQuantity": 905},
-     {"mineralId": 11, "mineralQuantity": 842},
-     {"mineralId": 1, "mineralQuantity": 2728},
-     {"mineralId": 10, "mineralQuantity": 877},
-     {"mineralId": 20, "mineralQuantity": 2037}]},
-   {"id": 5,
-    "displayName": "Thera Macula",
-    "locationName": "Europa",
-    "colonistId": 33,
-    "mineralMap": [{"mineralId": 20, "mineralQuantity": 2449},
-     {"mineralId": 5, "mineralQuantity": 1317},
-     {"mineralId": 2, "mineralQuantity": 936},
-     {"mineralId": 18, "mineralQuantity": 425},
-     {"mineralId": 1, "mineralQuantity": 2752},
-     {"mineralId": 7, "mineralQuantity": 275},
-     {"mineralId": 9, "mineralQuantity": 872}]},
-   {"id": 6,
-    "displayName": "Icehaven",
-    "locationName": "Europa",
-    "colonistId": 35,
-    "mineralMap": [{"mineralId": 14, "mineralQuantity": 2638},
-     {"mineralId": 20, "mineralQuantity": 985},
-     {"mineralId": 11, "mineralQuantity": 1317},
-     {"mineralId": 19, "mineralQuantity": 2145}]},
-   {"id": 7,
-    "displayName": "Shangri-La",
-    "locationName": "Titan",
-    "colonistId": 43,
-    "mineralMap": [{"mineralId": 20, "mineralQuantity": 1822},
-     {"mineralId": 12, "mineralQuantity": 1804},
-     {"mineralId": 17, "mineralQuantity": 860}]},
-   {"id": 8,
-    "displayName": "Kraken Mare",
-    "locationName": "Titan",
-    "colonistId": 7,
-    "mineralMap": [{"mineralId": 15, "mineralQuantity": 2574},
-     {"mineralId": 5, "mineralQuantity": 591},
-     {"mineralId": 4, "mineralQuantity": 1884},
-     {"mineralId": 6, "mineralQuantity": 1727}]},
-   {"id": 9,
-    "displayName": "Methanopolis",
-    "locationName": "Titan",
-    "colonistId": 13,
-    "mineralMap": [{"mineralId": 10, "mineralQuantity": 502},
-     {"mineralId": 8, "mineralQuantity": 1220},
-     {"mineralId": 9, "mineralQuantity": 2120},
-     {"mineralId": 19, "mineralQuantity": 646},
-     {"mineralId": 20, "mineralQuantity": 1707},
-     {"mineralId": 11, "mineralQuantity": 1637},
-     {"mineralId": 3, "mineralQuantity": 1850}]},
-   {"id": 10,
-    "displayName": "Occator Crater",
-    "locationName": "Ceres",
-    "colonistId": 6,
-    "mineralMap": [{"mineralId": 13, "mineralQuantity": 2540},
-     {"mineralId": 14, "mineralQuantity": 470},
-     {"mineralId": 5, "mineralQuantity": 267},
-     {"mineralId": 15, "mineralQuantity": 1951},
-     {"mineralId": 17, "mineralQuantity": 1827},
-     {"mineralId": 12, "mineralQuantity": 618}]},
-   {"id": 11,
-    "displayName": "Ahuna Mons",
-    "locationName": "Ceres",
-    "colonistId": 4,
-    "mineralMap": [{"mineralId": 18, "mineralQuantity": 2654},
-     {"mineralId": 11, "mineralQuantity": 832},
-     {"mineralId": 20, "mineralQuantity": 314},
-     {"mineralId": 9, "mineralQuantity": 2301}]},
-   {"id": 12,
-    "displayName": "Cerean Dome",
-    "locationName": "Ceres",
-    "colonistId": 1,
-    "mineralMap": [{"mineralId": 3, "mineralQuantity": 362},
-     {"mineralId": 16, "mineralQuantity": 1858},
-     {"mineralId": 19, "mineralQuantity": 1010}]},
-   {"id": 13,
-    "displayName": "Tycho City",
-    "locationName": "Luna",
-    "colonistId": 3,
-    "mineralMap": [{"mineralId": 10, "mineralQuantity": 630},
-     {"mineralId": 3, "mineralQuantity": 2507},
-     {"mineralId": 14, "mineralQuantity": 2917},
-     {"mineralId": 11, "mineralQuantity": 2975}]},
-   {"id": 14,
-    "displayName": "Tranquility Base",
-    "locationName": "Luna",
-    "colonistId": 24,
-    "mineralMap": [{"mineralId": 3, "mineralQuantity": 714},
-     {"mineralId": 7, "mineralQuantity": 1719},
-     {"mineralId": 18, "mineralQuantity": 2106}]},
-   {"id": 15,
-    "displayName": "Copernicus Station",
-    "locationName": "Luna",
-    "colonistId": 14,
-    "mineralMap": [{"mineralId": 6, "mineralQuantity": 1868},
-     {"mineralId": 17, "mineralQuantity": 1218},
-     {"mineralId": 10, "mineralQuantity": 2454},
-     {"mineralId": 5, "mineralQuantity": 2815},
-     {"mineralId": 2, "mineralQuantity": 792}]},
-   {"id": 16,
-    "displayName": "Galileo City",
-    "locationName": "Ganymede",
-    "colonistId": 45,
-    "mineralMap": [{"mineralId": 14, "mineralQuantity": 1992},
-     {"mineralId": 16, "mineralQuantity": 1090},
-     {"mineralId": 19, "mineralQuantity": 2290},
-     {"mineralId": 3, "mineralQuantity": 907}]},
-   {"id": 17,
-    "displayName": "Perrine Ridge",
-    "locationName": "Ganymede",
-    "colonistId": 36,
-    "mineralMap": [{"mineralId": 11, "mineralQuantity": 2000},
-     {"mineralId": 15, "mineralQuantity": 2561},
-     {"mineralId": 6, "mineralQuantity": 2132},
-     {"mineralId": 10, "mineralQuantity": 2315},
-     {"mineralId": 20, "mineralQuantity": 1017},
-     {"mineralId": 2, "mineralQuantity": 2325}]},
-   {"id": 18,
-    "displayName": "Oceanus Outpost",
-    "locationName": "Ganymede",
-    "colonistId": 49,
-    "mineralMap": [{"mineralId": 19, "mineralQuantity": 1338},
-     {"mineralId": 8, "mineralQuantity": 1153},
-     {"mineralId": 20, "mineralQuantity": 1269},
-     {"mineralId": 12, "mineralQuantity": 1276},
-     {"mineralId": 16, "mineralQuantity": 380}]},
-   {"id": 19,
-    "displayName": "Valhalla",
-    "locationName": "Callisto",
-    "colonistId": 41,
-    "mineralMap": [{"mineralId": 16, "mineralQuantity": 1842},
-     {"mineralId": 12, "mineralQuantity": 1530},
-     {"mineralId": 4, "mineralQuantity": 783}]},
-   {"id": 20,
-    "displayName": "Asgard Station",
-    "locationName": "Callisto",
-    "colonistId": 20,
-    "mineralMap": [{"mineralId": 1, "mineralQuantity": 2111},
-     {"mineralId": 9, "mineralQuantity": 2241},
-     {"mineralId": 4, "mineralQuantity": 1260}]},
-   {"id": 21,
-    "displayName": "Crateredge Colony",
-    "locationName": "Callisto",
-    "colonistId": 10,
-    "mineralMap": [{"mineralId": 16, "mineralQuantity": 1778},
-     {"mineralId": 10, "mineralQuantity": 2080},
-     {"mineralId": 18, "mineralQuantity": 510},
-     {"mineralId": 19, "mineralQuantity": 2558},
-     {"mineralId": 8, "mineralQuantity": 2224}]},
-   {"id": 22,
-    "displayName": "Tiger Stripes",
-    "locationName": "Enceladus",
-    "colonistId": 27,
-    "mineralMap": [{"mineralId": 1, "mineralQuantity": 1214},
-     {"mineralId": 16, "mineralQuantity": 2417},
-     {"mineralId": 18, "mineralQuantity": 1787}]},
-   {"id": 23,
-    "displayName": "Cryo Haven",
-    "locationName": "Enceladus",
-    "colonistId": 50,
-    "mineralMap": [{"mineralId": 4, "mineralQuantity": 1701},
-     {"mineralId": 7, "mineralQuantity": 2673},
-     {"mineralId": 2, "mineralQuantity": 1057},
-     {"mineralId": 9, "mineralQuantity": 1270},
-     {"mineralId": 1, "mineralQuantity": 1604},
-     {"mineralId": 17, "mineralQuantity": 1110},
-     {"mineralId": 11, "mineralQuantity": 1678}]},
-   {"id": 24,
-    "displayName": "Hydrothermal Base",
-    "locationName": "Enceladus",
-    "colonistId": 47,
-    "mineralMap": [{"mineralId": 11, "mineralQuantity": 2067},
-     {"mineralId": 15, "mineralQuantity": 1709},
-     {"mineralId": 19, "mineralQuantity": 1163},
-     {"mineralId": 14, "mineralQuantity": 1508},
-     {"mineralId": 5, "mineralQuantity": 529},
-     {"mineralId": 3, "mineralQuantity": 821},
-     {"mineralId": 6, "mineralQuantity": 1456}]},
-   {"id": 25,
-    "displayName": "Ishtar Terra",
-    "locationName": "Venus",
-    "colonistId": 37,
-    "mineralMap": [{"mineralId": 20, "mineralQuantity": 2589},
-     {"mineralId": 18, "mineralQuantity": 673},
-     {"mineralId": 1, "mineralQuantity": 1738},
-     {"mineralId": 17, "mineralQuantity": 2812}]}]
+      ]
+    },
+    {
+      "id": 2,
+      "displayName": "Valles Marineris",
+      "locationName": "Mars",
+      "colonistId": 38,
+      "mineralMap": [
+        {
+          "mineralId": 20,
+          "mineralQuantity": 2805
+        },
+        {
+          "mineralId": 9,
+          "mineralQuantity": 3000
+        },
+        {
+          "mineralId": 4,
+          "mineralQuantity": 778
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "displayName": "Arsia Colony",
+      "locationName": "Mars",
+      "colonistId": 32,
+      "mineralMap": [
+        {
+          "mineralId": 8,
+          "mineralQuantity": 1285
+        },
+        {
+          "mineralId": 16,
+          "mineralQuantity": 1723
+        },
+        {
+          "mineralId": 15,
+          "mineralQuantity": 1181
+        },
+        {
+          "mineralId": 7,
+          "mineralQuantity": 243
+        },
+        {
+          "mineralId": 4,
+          "mineralQuantity": 2559
+        },
+        {
+          "mineralId": 18,
+          "mineralQuantity": 1224
+        },
+        {
+          "mineralId": 11,
+          "mineralQuantity": 1061
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "displayName": "Conamara Chaos",
+      "locationName": "Europa",
+      "colonistId": 11,
+      "mineralMap": [
+        {
+          "mineralId": 4,
+          "mineralQuantity": 1679
+        },
+        {
+          "mineralId": 5,
+          "mineralQuantity": 905
+        },
+        {
+          "mineralId": 11,
+          "mineralQuantity": 842
+        },
+        {
+          "mineralId": 1,
+          "mineralQuantity": 2728
+        },
+        {
+          "mineralId": 10,
+          "mineralQuantity": 877
+        },
+        {
+          "mineralId": 20,
+          "mineralQuantity": 2037
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "displayName": "Thera Macula",
+      "locationName": "Europa",
+      "colonistId": 33,
+      "mineralMap": [
+        {
+          "mineralId": 20,
+          "mineralQuantity": 2449
+        },
+        {
+          "mineralId": 5,
+          "mineralQuantity": 1317
+        },
+        {
+          "mineralId": 2,
+          "mineralQuantity": 936
+        },
+        {
+          "mineralId": 18,
+          "mineralQuantity": 425
+        },
+        {
+          "mineralId": 1,
+          "mineralQuantity": 2752
+        },
+        {
+          "mineralId": 7,
+          "mineralQuantity": 275
+        },
+        {
+          "mineralId": 9,
+          "mineralQuantity": 872
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "displayName": "Icehaven",
+      "locationName": "Europa",
+      "colonistId": 35,
+      "mineralMap": [
+        {
+          "mineralId": 20,
+          "mineralQuantity": 985
+        },
+        {
+          "mineralId": 11,
+          "mineralQuantity": 1317
+        },
+        {
+          "mineralId": 19,
+          "mineralQuantity": 2145
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "displayName": "Shangri-La",
+      "locationName": "Titan",
+      "colonistId": 43,
+      "mineralMap": [
+        {
+          "mineralId": 20,
+          "mineralQuantity": 1822
+        },
+        {
+          "mineralId": 12,
+          "mineralQuantity": 1804
+        },
+        {
+          "mineralId": 17,
+          "mineralQuantity": 860
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "displayName": "Kraken Mare",
+      "locationName": "Titan",
+      "colonistId": 7,
+      "mineralMap": [
+        {
+          "mineralId": 15,
+          "mineralQuantity": 2574
+        },
+        {
+          "mineralId": 5,
+          "mineralQuantity": 591
+        },
+        {
+          "mineralId": 4,
+          "mineralQuantity": 1884
+        },
+        {
+          "mineralId": 6,
+          "mineralQuantity": 1727
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "displayName": "Methanopolis",
+      "locationName": "Titan",
+      "colonistId": 13,
+      "mineralMap": [
+        {
+          "mineralId": 10,
+          "mineralQuantity": 502
+        },
+        {
+          "mineralId": 8,
+          "mineralQuantity": 1220
+        },
+        {
+          "mineralId": 9,
+          "mineralQuantity": 2120
+        },
+        {
+          "mineralId": 19,
+          "mineralQuantity": 646
+        },
+        {
+          "mineralId": 20,
+          "mineralQuantity": 1707
+        },
+        {
+          "mineralId": 11,
+          "mineralQuantity": 1637
+        },
+        {
+          "mineralId": 3,
+          "mineralQuantity": 1850
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "displayName": "Occator Crater",
+      "locationName": "Ceres",
+      "colonistId": 6,
+      "mineralMap": [
+        {
+          "mineralId": 13,
+          "mineralQuantity": 2540
+        },
+        {
+          "mineralId": 14,
+          "mineralQuantity": 470
+        },
+        {
+          "mineralId": 5,
+          "mineralQuantity": 267
+        },
+        {
+          "mineralId": 15,
+          "mineralQuantity": 1951
+        },
+        {
+          "mineralId": 17,
+          "mineralQuantity": 1827
+        },
+        {
+          "mineralId": 12,
+          "mineralQuantity": 618
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "displayName": "Ahuna Mons",
+      "locationName": "Ceres",
+      "colonistId": 4,
+      "mineralMap": [
+        {
+          "mineralId": 18,
+          "mineralQuantity": 2654
+        },
+        {
+          "mineralId": 11,
+          "mineralQuantity": 832
+        },
+        {
+          "mineralId": 20,
+          "mineralQuantity": 314
+        },
+        {
+          "mineralId": 9,
+          "mineralQuantity": 2301
+        },
+        {
+          "mineralId": 14,
+          "mineralQuantity": 2638
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "displayName": "Cerean Dome",
+      "locationName": "Ceres",
+      "colonistId": 1,
+      "mineralMap": [
+        {
+          "mineralId": 3,
+          "mineralQuantity": 362
+        },
+        {
+          "mineralId": 16,
+          "mineralQuantity": 1858
+        },
+        {
+          "mineralId": 19,
+          "mineralQuantity": 1010
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "displayName": "Tycho City",
+      "locationName": "Luna",
+      "colonistId": 3,
+      "mineralMap": [
+        {
+          "mineralId": 10,
+          "mineralQuantity": 630
+        },
+        {
+          "mineralId": 3,
+          "mineralQuantity": 2507
+        },
+        {
+          "mineralId": 14,
+          "mineralQuantity": 2917
+        },
+        {
+          "mineralId": 11,
+          "mineralQuantity": 2975
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "displayName": "Tranquility Base",
+      "locationName": "Luna",
+      "colonistId": 24,
+      "mineralMap": [
+        {
+          "mineralId": 3,
+          "mineralQuantity": 714
+        },
+        {
+          "mineralId": 7,
+          "mineralQuantity": 1719
+        },
+        {
+          "mineralId": 18,
+          "mineralQuantity": 2106
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "displayName": "Copernicus Station",
+      "locationName": "Luna",
+      "colonistId": 14,
+      "mineralMap": [
+        {
+          "mineralId": 6,
+          "mineralQuantity": 1868
+        },
+        {
+          "mineralId": 17,
+          "mineralQuantity": 1218
+        },
+        {
+          "mineralId": 10,
+          "mineralQuantity": 2454
+        },
+        {
+          "mineralId": 5,
+          "mineralQuantity": 2815
+        },
+        {
+          "mineralId": 2,
+          "mineralQuantity": 792
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "displayName": "Galileo City",
+      "locationName": "Ganymede",
+      "colonistId": 45,
+      "mineralMap": [
+        {
+          "mineralId": 14,
+          "mineralQuantity": 1992
+        },
+        {
+          "mineralId": 16,
+          "mineralQuantity": 1090
+        },
+        {
+          "mineralId": 19,
+          "mineralQuantity": 2290
+        },
+        {
+          "mineralId": 3,
+          "mineralQuantity": 907
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "displayName": "Perrine Ridge",
+      "locationName": "Ganymede",
+      "colonistId": 36,
+      "mineralMap": [
+        {
+          "mineralId": 11,
+          "mineralQuantity": 2000
+        },
+        {
+          "mineralId": 15,
+          "mineralQuantity": 2561
+        },
+        {
+          "mineralId": 6,
+          "mineralQuantity": 2132
+        },
+        {
+          "mineralId": 10,
+          "mineralQuantity": 2315
+        },
+        {
+          "mineralId": 20,
+          "mineralQuantity": 1017
+        },
+        {
+          "mineralId": 2,
+          "mineralQuantity": 2325
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "displayName": "Oceanus Outpost",
+      "locationName": "Ganymede",
+      "colonistId": 49,
+      "mineralMap": [
+        {
+          "mineralId": 19,
+          "mineralQuantity": 1338
+        },
+        {
+          "mineralId": 8,
+          "mineralQuantity": 1153
+        },
+        {
+          "mineralId": 20,
+          "mineralQuantity": 1269
+        },
+        {
+          "mineralId": 12,
+          "mineralQuantity": 1276
+        },
+        {
+          "mineralId": 16,
+          "mineralQuantity": 380
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "displayName": "Valhalla",
+      "locationName": "Callisto",
+      "colonistId": 41,
+      "mineralMap": [
+        {
+          "mineralId": 16,
+          "mineralQuantity": 1842
+        },
+        {
+          "mineralId": 12,
+          "mineralQuantity": 1530
+        },
+        {
+          "mineralId": 4,
+          "mineralQuantity": 785
+        },
+        {
+          "mineralId": 1,
+          "mineralQuantity": 4217
+        },
+        {
+          "mineralId": 9,
+          "mineralQuantity": 4480
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "displayName": "Asgard Station",
+      "locationName": "Callisto",
+      "colonistId": 20,
+      "mineralMap": [
+        {
+          "mineralId": 4,
+          "mineralQuantity": 1258
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "displayName": "Crateredge Colony",
+      "locationName": "Callisto",
+      "colonistId": 10,
+      "mineralMap": [
+        {
+          "mineralId": 16,
+          "mineralQuantity": 1778
+        },
+        {
+          "mineralId": 10,
+          "mineralQuantity": 2080
+        },
+        {
+          "mineralId": 18,
+          "mineralQuantity": 510
+        },
+        {
+          "mineralId": 19,
+          "mineralQuantity": 2558
+        },
+        {
+          "mineralId": 8,
+          "mineralQuantity": 2224
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "displayName": "Tiger Stripes",
+      "locationName": "Enceladus",
+      "colonistId": 27,
+      "mineralMap": [
+        {
+          "mineralId": 1,
+          "mineralQuantity": 1214
+        },
+        {
+          "mineralId": 16,
+          "mineralQuantity": 2417
+        },
+        {
+          "mineralId": 18,
+          "mineralQuantity": 1787
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "displayName": "Cryo Haven",
+      "locationName": "Enceladus",
+      "colonistId": 50,
+      "mineralMap": [
+        {
+          "mineralId": 4,
+          "mineralQuantity": 1701
+        },
+        {
+          "mineralId": 7,
+          "mineralQuantity": 2673
+        },
+        {
+          "mineralId": 2,
+          "mineralQuantity": 1057
+        },
+        {
+          "mineralId": 9,
+          "mineralQuantity": 1270
+        },
+        {
+          "mineralId": 1,
+          "mineralQuantity": 1604
+        },
+        {
+          "mineralId": 17,
+          "mineralQuantity": 1110
+        },
+        {
+          "mineralId": 11,
+          "mineralQuantity": 1678
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "displayName": "Hydrothermal Base",
+      "locationName": "Enceladus",
+      "colonistId": 47,
+      "mineralMap": [
+        {
+          "mineralId": 11,
+          "mineralQuantity": 2067
+        },
+        {
+          "mineralId": 15,
+          "mineralQuantity": 1709
+        },
+        {
+          "mineralId": 19,
+          "mineralQuantity": 1163
+        },
+        {
+          "mineralId": 14,
+          "mineralQuantity": 1508
+        },
+        {
+          "mineralId": 5,
+          "mineralQuantity": 529
+        },
+        {
+          "mineralId": 3,
+          "mineralQuantity": 821
+        },
+        {
+          "mineralId": 6,
+          "mineralQuantity": 1456
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "displayName": "Ishtar Terra",
+      "locationName": "Venus",
+      "colonistId": 37,
+      "mineralMap": [
+        {
+          "mineralId": 20,
+          "mineralQuantity": 2589
+        },
+        {
+          "mineralId": 18,
+          "mineralQuantity": 673
+        },
+        {
+          "mineralId": 1,
+          "mineralQuantity": 1738
+        },
+        {
+          "mineralId": 17,
+          "mineralQuantity": 2812
+        }
+      ]
+    }
+  ]
 }

@@ -16,13 +16,13 @@ export const getColony = async (colonyId) => {
     return await fetch (`http://localhost:8088/colonies/${colonyId}`).then(result => result.json())
 }
 
-export const postColony = async (colony) => {
+export const updateColony = async (colony) => {
     const postOptions = {
-        method: "POST",
+        method: "PUT",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(colony)
     }
-    return await fetch (`http://localhost:8088/colonies/${colonyId}`, postOptions).then(result => result.json())
+    return await fetch (`http://localhost:8088/colonies/${colony.id}`, postOptions).then(result => result.json())
 }
